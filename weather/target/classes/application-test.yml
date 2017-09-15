@@ -1,0 +1,40 @@
+# Server settings
+server:
+    port:8080
+    address:localhost
+
+# DATASOURCE
+jdbc:
+    driverClass: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/szzt?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: szzt
+
+# SPRING PROFILES
+spring:
+    # HTTP ENCODING
+    http:
+        encoding.charset: UTF-8
+        encoding.enable: true
+        encoding.force: true
+
+    #freemarker
+    freemarker:
+        cache: false
+        template-loader-path: classpath:/templates/
+        charset: UTF-8
+        content-type: text/html
+        expose-request-attributes: false
+        expose-session-attributes: false
+        expose-spring-macro-helpers: false
+        check-template-location: true
+        allow-request-override: false
+    #mvc
+    mvc:
+      static-path-pattern: /static/**
+
+# MyBatis
+#mybatis:
+ #   typeAliasesPackage: com.modou.**.domain
+#    mapperLocations: classpath:/com/modou/**/mapper/*.xml
+ #   configLocation: classpath:/mybatis-config.xml
